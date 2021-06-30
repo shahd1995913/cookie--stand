@@ -33,6 +33,10 @@ this.getRandom = function () {
 }
 
 
+
+
+
+
 this.cookiesPerHour = [];
 this.generateList = function () {
   let result = [];
@@ -74,6 +78,8 @@ this.getTableRow = function () {
   return html;
 }
 }
+
+
 
 var seattle = new shop('Seattle', 23, 65, 6.5);
 var Tokyo = new shop('Tokyo', 3, 24, 1.2);
@@ -139,6 +145,7 @@ for (let i = 0; i < 15; i++) {
 totalCookiesPerHour.forEach(cookies => {
   footer += "\n<td class='tableElement'>" + cookies + "</td>";
 });
+
 footer += "\n</tr>";
 
 tableContent += footer;
@@ -146,6 +153,27 @@ tableContent += footer;
 table.innerHTML = tableContent;
 
 document.body.appendChild(table);
+
+
+
+  var loc = document.getElementById('loc');
+  var min = document.getElementById('min');
+  var max = document.getElementById('max');
+  submitButton.onclick = function () {
+    console.log(loc.value + min.value + max.value );
+  };
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // global array for the working hours
 //  const workingHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']; 
