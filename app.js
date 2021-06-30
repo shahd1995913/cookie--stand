@@ -76,10 +76,11 @@ this.getTableRow = function () {
 }
 
 var seattle = new shop('Seattle', 23, 65, 6.5);
-var Tokyo = new shop('Tokyo', 23, 65, 6.5);
-var Dubai = new shop('Dubai', 23, 65, 6.5);
-var Paris = new shop('Paris', 23, 65, 6.5);
-var Lima = new shop('Lima', 23, 65, 6.5);
+var Tokyo = new shop('Tokyo', 3, 24, 1.2);
+var Dubai = new shop('Dubai', 11, 38, 3.7);
+var Paris = new shop('Paris', 20, 38, 2.3);
+var Lima = new shop('Lima', 2, 16, 4.6);
+
 
 //   document.body.appendChild(seattle.getHtml());
 //   document.body.appendChild(Tokyo.getHtml());
