@@ -1,6 +1,108 @@
 'use strict';
 
 
+
+
+function shop(shopName, min, max, avg) {
+  this.min = min;
+  this.max = max;
+  this.avgCookiePerCustomer = avg;
+  this.shopName = shopName;
+  this.total = 0;
+ // this.list = this.generateList();
+
+ this.workhour = [
+  '6am',
+  '7am',
+  '8am',
+  '9am',
+  '10am',
+  '11am',
+  '12pm',
+  '1pm',
+  '2pm',
+  '3pm',
+  '4pm',
+  '5pm',
+  '6pm',
+  '7pm',
+];
+
+
+
+
+
+this.getRandom = function () {
+  return Math.floor((Math.random() * (this.max - this.min) + this.min) * this.avgCookiePerCustomer);
+}
+
+
+this.cookiesPerHour = [];
+this.generateList = function () {
+  let result = [];
+  for (const hour in this.workhour) {
+      var cookies = this.getRandom();
+      this.total += cookies;
+      result.push(this.workhour[hour] + ': ' + cookies + ' cookies.');
+  }
+  result.push('Total: ' + this.total + ' cookies.')
+  return result;
+}
+
+this.getHtml = function () {
+  this.list=generateList();
+  var root = document.createElement('div');
+  root.innerHTML = "<h2 style='padding-left:15px;'>" + + "</h2>";
+  var ul = document.createElement('ul');
+  for (let i = 0; i < this.list.length; i++) {
+      const element = document.createElement('li');
+      element.innerHTML = this.list[i];
+      ul.appendChild(element)
+  }
+  root.appendChild(ul);
+  return root;
+}
+
+this.getTableRow = function () {
+  var html = "<tr><td class='tableElement'>" + this.shopName + "</td>";
+  for (const hour in this.workhour) {
+      var cookies = this.getRandom();
+      this.cookiesPerHour.push(cookies);
+      this.total += cookies;
+      html += "\n<td class='tableElement'>" + cookies + "</td>";
+  }
+  html += "\n<td class='tableElement'>" + this.total + "</td>";
+  html += "\n</tr>";
+
+  this.cookiesPerHour.push(this.total);
+  return html;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var seattle = new shop('Seattle', 23, 65, 6.5);
 var Tokyo = new shop('Tokyo', 3, 24, 1.2);
 var Dubai = new shop('Dubai', 11, 38, 3.7);
