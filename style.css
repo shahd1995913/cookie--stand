@@ -1,6 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
 
+table,th,td{
+
+
+  border: solid black 1px;
+  background-color: cornsilk;
+  color: darkblue;
+  
+  }
+
+
+
 #rcorners1 {
     border-radius: 25px;
     background: #c5efff;
