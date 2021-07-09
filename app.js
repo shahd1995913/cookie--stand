@@ -10,6 +10,12 @@ const workinghoures =['6am','7am','8am','9am','10am','11am','12pm','1pm'
 function random(minvalue,maxvalu)
 {
 return Math.floor(Math.random()*(maxvalu-minvalue+1)+minvalue);
+//return Math.random() * (maxvalu - minvalue);
+//return Math.floor(Math.random() * (maxvalu - minvalue + 1) + minvalue);
+//return Math.floor(Math.random() * (maxvalu - minvalue) + minvalue); 
+
+
+
 }
 
 //Global array
