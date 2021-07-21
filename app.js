@@ -1,4 +1,6 @@
 'use strict';
+//Constactar in JS
+
 function shop(shopName, min, max, avg) {
   this.min = min;
   this.max = max;
@@ -6,7 +8,7 @@ function shop(shopName, min, max, avg) {
   this.shopName = shopName;
   this.total = 0;
  // this.list = this.generateList();
-
+//Array 
  this.workhour = [
   '6am',
   '7am',
@@ -26,38 +28,17 @@ function shop(shopName, min, max, avg) {
 
 
 
-
+//Method
 
 this.getRandom = function () {
   return Math.floor((Math.random() * (this.max - this.min) + this.min) * this.avgCookiePerCustomer);
 }
 
-
+//Array
 this.cookiesPerHour = [];
-this.generateList = function () {
-  let result = [];
-  for (const hour in this.workhour) {
-      var cookies = this.getRandom();
-      this.total += cookies;
-      result.push(this.workhour[hour] + ': ' + cookies + ' cookies.');
-  }
-  result.push('Total: ' + this.total + ' cookies.')
-  return result;
-}
 
-this.getHtml = function () {
-  this.list=generateList();
-  var root = document.createElement('div');
-  root.innerHTML = "<h2 style='padding-left:15px;'>" + + "</h2>";
-  var ul = document.createElement('ul');
-  for (let i = 0; i < this.list.length; i++) {
-      const element = document.createElement('li');
-      element.innerHTML = this.list[i];
-      ul.appendChild(element)
-  }
-  root.appendChild(ul);
-  return root;
-}
+
+
 
 this.getTableRow = function () {
   var html = "<tr><td class='tableElement'>" + this.shopName + "</td>";
@@ -74,7 +55,7 @@ this.getTableRow = function () {
   return html;
 }
 }
-
+//Create Obj From Constracture 
 var seattle = new shop('Seattle', 23, 65, 6.5);
 var Tokyo = new shop('Tokyo', 3, 24, 1.2);
 var Dubai = new shop('Dubai', 11, 38, 3.7);
@@ -82,11 +63,48 @@ var Paris = new shop('Paris', 20, 38, 2.3);
 var Lima = new shop('Lima', 2, 16, 4.6);
 
 
+
+
+
+
+
+
+
+
+//Method 
+//The array push() function adds one or more values to the end of the array  
+// this.generateList = function () {
+//   let result = [];
+//   for (const hour in this.workhour) {
+//       var cookies = this.getRandom(); // use random function
+//       this.total += cookies;
+//       result.push(this.workhour[hour] + ': ' + cookies + ' cookies.');
+//   }
+//   result.push('Total: ' + this.total + ' cookies.')
+//   return result;
+// }
+
+// this.getHtml = function () {
+//   this.list=generateList();
+//   var root = document.createElement('div');
+//   root.innerHTML = "<h2 style='padding-left:15px;'>" + + "</h2>";
+//   var ul = document.createElement('ul');
+//   for (let i = 0; i < this.list.length; i++) {
+//       const element = document.createElement('li');
+//       element.innerHTML = this.list[i];
+//       ul.appendChild(element)
+//   }
+//   root.appendChild(ul);
+//   return root;
+// }
+
 //   document.body.appendChild(seattle.getHtml());
 //   document.body.appendChild(Tokyo.getHtml());
 //   document.body.appendChild(Dubai.getHtml());
 //   document.body.appendChild(Paris.getHtml());
 //   document.body.appendChild(Lima.getHtml());
+
+//Create A tabel 
 
 var table = document.createElement('table');
 var header = [
@@ -106,7 +124,7 @@ var header = [
   '7:00pm',
 ];
 
-var tableContent = "<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+var tableContent = "<tr><td></td>";
 header.forEach(element => {
   tableContent += "\n<td><b>" + element + "</b></td>"
 });
@@ -127,12 +145,12 @@ for (let i = 0; i < 15; i++) {
       + Paris.cookiesPerHour[i]
       + Lima.cookiesPerHour[i];
 
-  console.log("[" + i + "]" + seattle.cookiesPerHour[i]);
-  console.log("[" + i + "]" + Tokyo.cookiesPerHour[i]);
-  console.log("[" + i + "]" + Dubai.cookiesPerHour[i]);
-  console.log("[" + i + "]" + Paris.cookiesPerHour[i]);
-  console.log("[" + i + "]" + Lima.cookiesPerHour[i]);
-  console.log(totalPerHour)
+  // console.log("[" + i + "]" + seattle.cookiesPerHour[i]);
+  // console.log("[" + i + "]" + Tokyo.cookiesPerHour[i]);
+  // console.log("[" + i + "]" + Dubai.cookiesPerHour[i]);
+  // console.log("[" + i + "]" + Paris.cookiesPerHour[i]);
+  // console.log("[" + i + "]" + Lima.cookiesPerHour[i]);
+  // console.log(totalPerHour)
   totalCookiesPerHour.push(totalPerHour);
 }
 
