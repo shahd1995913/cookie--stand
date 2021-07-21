@@ -112,7 +112,7 @@ var header = [
   '7:00pm',
 ];
 
-var tableContent = "<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+var tableContent = "<tr><td></td>";
 header.forEach(element => {
   tableContent += "\n<td><b>" + element + "</b></td>"
 });
